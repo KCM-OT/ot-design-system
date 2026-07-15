@@ -3,7 +3,15 @@ import { Toast } from "./components/Toast";
 import type { ToastType } from "./components/Toast";
 import { Icon, iconNames } from "./icons";
 import { logos } from "./logo";
+import { Button } from "./components/Button";
+import type { ButtonVariant } from "./components/Button";
+import { LinkButton } from "./components/LinkButton";
+import { InlineLinkButton } from "./components/InlineLinkButton";
+import { IconButton } from "./components/IconButton";
+import { ButtonGroup } from "./components/ButtonGroup";
 import "./App.css";
+
+const BUTTON_VARIANTS: ButtonVariant[] = ["primary", "secondary", "tertiary"];
 
 const LOGO_ITEMS: { name: keyof typeof logos; label: string }[] = [
   { name: "symbol", label: "Symbol" },
@@ -93,12 +101,89 @@ function App() {
 
       <section className="oc-section">
         <h2 className="oc-section__title">Components</h2>
-        <div className="oc-card">
-          <div className="oc-ramp-name">Toast</div>
-          <div className="oc-row" style={{ alignItems: "flex-start" }}>
-            {TOAST_TYPES.map((t) => (
-              <Toast key={t} type={t} showTimeoutBar={t !== "neutral"} />
+        <div className="oc-card" style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+          <div>
+            <div className="oc-ramp-name">Toast</div>
+            <div className="oc-row" style={{ alignItems: "flex-start" }}>
+              {TOAST_TYPES.map((t) => (
+                <Toast key={t} type={t} showTimeoutBar={t !== "neutral"} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="oc-ramp-name">Button</div>
+            <p style={{ marginTop: 0, marginBottom: 12, color: "var(--oc-muted-foreground)", fontSize: 13 }}>
+              Hover/press are live CSS, not static swatches — try it. Figma's green palette
+              (#468254/#2c6145) is mapped onto <code>--oc-primary</code> since it isn't in this
+              project's tokens.
+            </p>
+            {BUTTON_VARIANTS.map((variant) => (
+              <div className="oc-row" key={variant} style={{ marginBottom: 12 }}>
+                <Button variant={variant}>Button</Button>
+                <Button variant={variant} loading />
+                <Button variant={variant} disabled>
+                  Button
+                </Button>
+              </div>
             ))}
+          </div>
+
+          <div>
+            <div className="oc-ramp-name">Button group</div>
+            <ButtonGroup>
+              <Button variant="tertiary">Cancel</Button>
+              <Button variant="secondary">Save draft</Button>
+              <Button variant="primary">Submit</Button>
+            </ButtonGroup>
+          </div>
+
+          <div>
+            <div className="oc-ramp-name">Link button</div>
+            <div className="oc-row">
+              <LinkButton size="large">Link button</LinkButton>
+              <LinkButton size="large" icon>
+                Link button
+              </LinkButton>
+              <LinkButton size="small">Link button</LinkButton>
+              <LinkButton size="small" icon>
+                Link button
+              </LinkButton>
+            </div>
+          </div>
+
+          <div>
+            <div className="oc-ramp-name">Inline link button</div>
+            <p style={{ margin: 0, fontSize: 16, color: "var(--oc-foreground)" }}>
+              Read the <InlineLinkButton size="large">large primary link</InlineLinkButton> or the{" "}
+              <InlineLinkButton size="large" emphasis="secondary">
+                large secondary link
+              </InlineLinkButton>
+              .
+            </p>
+            <p style={{ margin: "8px 0 0", fontSize: 14, color: "var(--oc-foreground)" }}>
+              Medium sizes: <InlineLinkButton size="medium">primary</InlineLinkButton> /{" "}
+              <InlineLinkButton size="medium" emphasis="secondary">
+                secondary
+              </InlineLinkButton>
+            </p>
+            <p style={{ margin: "8px 0 0", fontSize: 12, color: "var(--oc-foreground)" }}>
+              Small sizes: <InlineLinkButton size="small">primary</InlineLinkButton> /{" "}
+              <InlineLinkButton size="small" emphasis="secondary">
+                secondary
+              </InlineLinkButton>
+            </p>
+          </div>
+
+          <div>
+            <div className="oc-ramp-name">Icon button</div>
+            <div className="oc-row">
+              <IconButton icon="ellipsis" aria-label="More actions" />
+              <IconButton icon="pencil" aria-label="Edit" />
+              <IconButton icon="trash-can" aria-label="Delete" />
+              <IconButton icon="pencil" size="sm" aria-label="Edit" />
+              <IconButton icon="xmark" size="sm" aria-label="Close" />
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,30 @@
+.oc-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: var(--oc-control-radius-md);
+  color: var(--oc-foreground);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+.oc-icon-button:disabled {
+  color: var(--oc-disabled-foreground);
+  cursor: not-allowed;
+}
+.oc-icon-button:hover:not(:disabled) {
+  background: var(--oc-secondary-hover);
+}
+.oc-icon-button:active:not(:disabled) {
+  background: var(--oc-secondary-active);
+}
+
+.oc-icon-button--md {
+  width: var(--oc-control-size-sm);
+  height: var(--oc-control-size-sm);
+}
+.oc-icon-button--sm {
+  width: var(--oc-control-size-sm-icon);
+  height: var(--oc-control-size-sm-icon);
+}

@@ -1,0 +1,33 @@
+.oc-inline-link {
+  font-family: var(--oc-font-family);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: var(--oc-control-radius-sm);
+}
+
+.oc-inline-link--large {
+  font-size: var(--oc-type-body-size);
+  line-height: var(--oc-type-body-line);
+}
+.oc-inline-link--medium {
+  font-size: var(--oc-type-sm-body-size);
+  line-height: var(--oc-type-sm-body-line);
+}
+.oc-inline-link--small {
+  font-size: var(--oc-type-caption-size);
+  line-height: var(--oc-type-caption-line);
+}
+
+.oc-inline-link--primary {
+  color: var(--oc-utility-link);
+  text-decoration: none;
+}
+.oc-inline-link--primary:hover {
+  text-decoration: underline;
+}
+
+.oc-inline-link--secondary {
+  color: var(--oc-foreground);
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}

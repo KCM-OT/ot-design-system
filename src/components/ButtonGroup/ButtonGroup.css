@@ -1,0 +1,5 @@
+.oc-button-group {
+  display: flex;
+  align-items: center;
+  gap: var(--oc-control-group-gap);
+}
