@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--oc-foreground);
+  background: var(--oc-canvas);
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.oc-icon {
+  display: inline-flex;
+  flex: none;
+  color: inherit;
+}
+.oc-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

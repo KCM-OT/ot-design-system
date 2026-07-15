@@ -1,0 +1,759 @@
+/**
+ * OneCore design tokens (v2)
+ * Source: Figma variable-collection export (core, alias, oc) from the
+ * OneCore_-Refactor file (fileKey Sm3hawXtOfa0d5ZBiQ28As).
+ * Generated from alias.zip / core.zip / oc.zip exports — do not hand-edit
+ * individual values; regenerate from a fresh export instead.
+ *
+ * NOTE: the Figma 'typescale' variable collection (font-size/font-weight)
+ * exported with all values at 0 — type sizes are Figma Text Styles, not
+ * Variables, so they weren't in that export. The --oc-type-* tokens below
+ * were pulled separately from the "Typography" documentation frame (node
+ * 26802:2330) via get_design_context and are NOT part of the raw zip
+ * export; regenerating from a fresh export will not touch them, but a
+ * change to the actual text styles in Figma would need to be re-pulled.
+ *
+ * Theme: --oc-* semantic tokens default to light mode on :root. Add
+ * data-theme="dark" to <html> (or any ancestor) to switch to dark.
+ */
+
+:root {
+
+  /* ---- Core color primitives (ramps) ---- */
+  --oc-amber-100: #FFF2C7;
+  --oc-amber-200: #FCE58A;
+  --oc-amber-300: #FCD44D;
+  --oc-amber-400: #FABF24;
+  --oc-amber-50: #FFFAEB;
+  --oc-amber-500: #F59E0A;
+  --oc-amber-600: #D97805;
+  --oc-amber-700: #B5540A;
+  --oc-amber-800: #91400D;
+  --oc-amber-900: #78360F;
+  --oc-amber-950: #451A03;
+  --oc-base-black: #000000;
+  --oc-base-white: #FFFFFF;
+  --oc-blue-100: #DBEBFF;
+  --oc-blue-200: #BFDBFF;
+  --oc-blue-300: #94C4FC;
+  --oc-blue-400: #61A6FA;
+  --oc-blue-50: #F0F5FF;
+  --oc-blue-500: #3B82F5;
+  --oc-blue-600: #2663EB;
+  --oc-blue-700: #1C4FD9;
+  --oc-blue-800: #1F40B0;
+  --oc-blue-900: #1F3B8A;
+  --oc-blue-950: #172654;
+  --oc-brand-beige: #D9D9CC;
+  --oc-brand-indigo: #3B40D8;
+  --oc-brand-jade: #008665;
+  --oc-brand-leaf: #00BA34;
+  --oc-brand-mint: #6CEEAD;
+  --oc-brand-purple: #976FE6;
+  --oc-brand-sky: #0688F8;
+  --oc-brand-yellow: #FFEE3B;
+  --oc-cyan-100: #CFFAFF;
+  --oc-cyan-200: #A6F2FC;
+  --oc-cyan-300: #66E8FA;
+  --oc-cyan-400: #21D4ED;
+  --oc-cyan-50: #EDFFFF;
+  --oc-cyan-500: #05B5D4;
+  --oc-cyan-600: #0891B2;
+  --oc-cyan-700: #0D738F;
+  --oc-cyan-800: #145E75;
+  --oc-cyan-900: #174F63;
+  --oc-cyan-950: #083345;
+  --oc-emerald-100: #D1FAE5;
+  --oc-emerald-200: #A6F2D1;
+  --oc-emerald-300: #6EE8B8;
+  --oc-emerald-400: #33D499;
+  --oc-emerald-50: #EDFCF5;
+  --oc-emerald-500: #0FBA82;
+  --oc-emerald-600: #059669;
+  --oc-emerald-700: #057857;
+  --oc-emerald-800: #055E45;
+  --oc-emerald-900: #054F3B;
+  --oc-emerald-950: #032B21;
+  --oc-fuchsia-100: #FAE8FF;
+  --oc-fuchsia-200: #F5D1FF;
+  --oc-fuchsia-300: #F0ABFC;
+  --oc-fuchsia-400: #E878FA;
+  --oc-fuchsia-50: #FCF5FF;
+  --oc-fuchsia-500: #D945F0;
+  --oc-fuchsia-600: #BF26D4;
+  --oc-fuchsia-700: #A31CB0;
+  --oc-fuchsia-800: #871A8F;
+  --oc-fuchsia-900: #701A75;
+  --oc-fuchsia-950: #4A054F;
+  --oc-gray-100: #F2F5F5;
+  --oc-gray-200: #E5E8EB;
+  --oc-gray-300: #D1D6DB;
+  --oc-gray-400: #9CA3B0;
+  --oc-gray-50: #FAFAFA;
+  --oc-gray-500: #6B7380;
+  --oc-gray-600: #4A5463;
+  --oc-gray-700: #384052;
+  --oc-gray-800: #1F2938;
+  --oc-gray-900: #121726;
+  --oc-gray-950: #030812;
+  --oc-green-100: #DBFCE8;
+  --oc-green-200: #BAF7D1;
+  --oc-green-300: #87F0AB;
+  --oc-green-400: #4ADE80;
+  --oc-green-50: #F0FCF5;
+  --oc-green-500: #21C45E;
+  --oc-green-600: #17A34A;
+  --oc-green-700: #14803D;
+  --oc-green-800: #176633;
+  --oc-green-900: #14542E;
+  --oc-green-950: #052E17;
+  --oc-indigo-100: #E0E8FF;
+  --oc-indigo-200: #C7D1FF;
+  --oc-indigo-300: #A6B5FC;
+  --oc-indigo-400: #828CF7;
+  --oc-indigo-50: #EDF2FF;
+  --oc-indigo-500: #6366F2;
+  --oc-indigo-600: #4F45E5;
+  --oc-indigo-700: #4238C9;
+  --oc-indigo-800: #3830A3;
+  --oc-indigo-900: #302E82;
+  --oc-indigo-950: #1F1C4A;
+  --oc-lime-100: #EDFCCC;
+  --oc-lime-200: #D9FA9E;
+  --oc-lime-300: #BFF263;
+  --oc-lime-400: #A3E536;
+  --oc-lime-50: #F7FFE8;
+  --oc-lime-500: #85CC17;
+  --oc-lime-600: #66A30D;
+  --oc-lime-700: #4D7D0F;
+  --oc-lime-800: #406112;
+  --oc-lime-900: #365414;
+  --oc-lime-950: #121212;
+  --oc-neutral-100: #F5F5F5;
+  --oc-neutral-200: #E5E5E5;
+  --oc-neutral-300: #D4D4D4;
+  --oc-neutral-400: #A3A3A3;
+  --oc-neutral-50: #FAFAFA;
+  --oc-neutral-500: #737373;
+  --oc-neutral-600: #525252;
+  --oc-neutral-700: #404040;
+  --oc-neutral-800: #262626;
+  --oc-neutral-900: #171717;
+  --oc-neutral-950: #0A0A0A;
+  --oc-orange-100: #FFEDD6;
+  --oc-orange-200: #FFD6AB;
+  --oc-orange-300: #FCBA73;
+  --oc-orange-400: #FA913D;
+  --oc-orange-50: #FFF7ED;
+  --oc-orange-500: #FA7317;
+  --oc-orange-600: #EB590D;
+  --oc-orange-700: #C2400D;
+  --oc-orange-800: #993312;
+  --oc-orange-900: #7D2E12;
+  --oc-orange-950: #421408;
+  --oc-pink-100: #FCE8F2;
+  --oc-pink-200: #FACFE8;
+  --oc-pink-300: #FAA8D4;
+  --oc-pink-400: #F573B5;
+  --oc-pink-50: #FCF2F7;
+  --oc-pink-500: #ED4799;
+  --oc-pink-600: #DB2678;
+  --oc-pink-700: #BF175C;
+  --oc-pink-800: #9E174D;
+  --oc-pink-900: #821742;
+  --oc-pink-950: #4F0824;
+  --oc-purple-100: #F2E8FF;
+  --oc-purple-200: #E8D6FF;
+  --oc-purple-300: #D9B5FF;
+  --oc-purple-400: #BF85FC;
+  --oc-purple-50: #FAF5FF;
+  --oc-purple-500: #A854F7;
+  --oc-purple-600: #9433EB;
+  --oc-purple-700: #7D21CF;
+  --oc-purple-800: #6B21A8;
+  --oc-purple-900: #591C87;
+  --oc-purple-950: #3B0863;
+  --oc-red-100: #FFE3E3;
+  --oc-red-200: #FFC9C9;
+  --oc-red-300: #FCA6A6;
+  --oc-red-400: #F77070;
+  --oc-red-50: #FFF2F2;
+  --oc-red-500: #F04545;
+  --oc-red-600: #DB2626;
+  --oc-red-700: #BA1C1C;
+  --oc-red-800: #991C1C;
+  --oc-red-900: #801C1C;
+  --oc-red-950: #450A0A;
+  --oc-rose-100: #FFE3E5;
+  --oc-rose-200: #FFCCD4;
+  --oc-rose-300: #FCA3B0;
+  --oc-rose-400: #FA7085;
+  --oc-rose-50: #FFF2F2;
+  --oc-rose-500: #F5405E;
+  --oc-rose-600: #E01C47;
+  --oc-rose-700: #BF123D;
+  --oc-rose-800: #9E1238;
+  --oc-rose-900: #871238;
+  --oc-rose-950: #4D051A;
+  --oc-sky-100: #E0F2FF;
+  --oc-sky-200: #BAE5FC;
+  --oc-sky-300: #7DD4FC;
+  --oc-sky-400: #38BDF7;
+  --oc-sky-50: #F0FAFF;
+  --oc-sky-500: #0DA6E8;
+  --oc-sky-600: #0385C7;
+  --oc-sky-700: #0369A1;
+  --oc-sky-800: #085985;
+  --oc-sky-900: #0D4A6E;
+  --oc-sky-950: #082E4A;
+  --oc-slate-100: #F2F5FA;
+  --oc-slate-200: #E3E8F0;
+  --oc-slate-300: #CCD6E0;
+  --oc-slate-400: #94A3B8;
+  --oc-slate-50: #F7FAFC;
+  --oc-slate-500: #63738C;
+  --oc-slate-600: #475469;
+  --oc-slate-700: #334054;
+  --oc-slate-800: #1F293B;
+  --oc-slate-900: #0F1729;
+  --oc-slate-950: #030517;
+  --oc-stone-100: #F5F5F5;
+  --oc-stone-200: #E8E5E3;
+  --oc-stone-300: #D6D4D1;
+  --oc-stone-400: #A8A39E;
+  --oc-stone-50: #FAFAFA;
+  --oc-stone-500: #78706B;
+  --oc-stone-600: #57544F;
+  --oc-stone-700: #45403D;
+  --oc-stone-800: #292624;
+  --oc-stone-900: #1C1A17;
+  --oc-stone-950: #0D0A0A;
+  --oc-teal-100: #CCFAF2;
+  --oc-teal-200: #99F5E3;
+  --oc-teal-300: #5EEBD4;
+  --oc-teal-400: #2ED4BF;
+  --oc-teal-50: #F0FCFA;
+  --oc-teal-500: #14B8A6;
+  --oc-teal-600: #0D9487;
+  --oc-teal-700: #0F756E;
+  --oc-teal-800: #125E59;
+  --oc-teal-900: #124F4A;
+  --oc-teal-950: #052E2E;
+  --oc-violet-100: #EDE8FF;
+  --oc-violet-200: #DED6FF;
+  --oc-violet-300: #C4B5FC;
+  --oc-violet-400: #A68CFA;
+  --oc-violet-50: #F5F2FF;
+  --oc-violet-500: #8C5CF5;
+  --oc-violet-600: #7D3BED;
+  --oc-violet-700: #6E29D9;
+  --oc-violet-800: #5C21B5;
+  --oc-violet-900: #4D1C94;
+  --oc-violet-950: #2E0F66;
+  --oc-yellow-100: #FFFAC2;
+  --oc-yellow-200: #FFF08A;
+  --oc-yellow-300: #FCE047;
+  --oc-yellow-400: #FACC14;
+  --oc-yellow-50: #FFFCE8;
+  --oc-yellow-500: #EBB208;
+  --oc-yellow-600: #C98A05;
+  --oc-yellow-700: #A16108;
+  --oc-yellow-800: #854D0D;
+  --oc-yellow-900: #704012;
+  --oc-yellow-950: #422105;
+  --oc-zinc-100: #F5F5F5;
+  --oc-zinc-200: #E3E3E8;
+  --oc-zinc-300: #D4D4D9;
+  --oc-zinc-400: #A1A1AB;
+  --oc-zinc-50: #FAFAFA;
+  --oc-zinc-500: #70707A;
+  --oc-zinc-600: #52525C;
+  --oc-zinc-700: #404045;
+  --oc-zinc-800: #262629;
+  --oc-zinc-900: #17171C;
+  --oc-zinc-950: #0A0A0A;
+
+  /* ---- Core spacing scale ---- */
+  --oc-core-space-0: 0px;
+  --oc-core-space-1: 4px;
+  --oc-core-space-2: 8px;
+  --oc-core-space-3: 12px;
+  --oc-core-space-4: 16px;
+  --oc-core-space-5: 24px;
+  --oc-core-space-6: 32px;
+  --oc-core-space-7: 40px;
+  --oc-core-space-8: 48px;
+  --oc-core-space-9: 64px;
+
+  /* ---- Core motion durations ---- */
+  --oc-duration-micro: 140ms;
+  --oc-duration-settle: 280ms;
+  --oc-duration-enter: 400ms;
+  --oc-duration-expand: 420ms;
+  --oc-duration-token-reveal: 260ms;
+  --oc-duration-morph-in: 440ms;
+  --oc-duration-morph-out: 320ms;
+
+  /* ---- Core motion easing ---- */
+  --oc-ease-decelerate: cubic-bezier(.2,.7,.3,1);
+  --oc-ease-standard: cubic-bezier(.4,0,.2,1);
+  --oc-ease-linear: linear;
+
+  /* ---- Control dimensions (sizing, gaps, padding) ---- */
+  --oc-backdrop-blur: 8px;
+  --oc-container-border-width: 0.5px;
+  --oc-container-padding-md: 16px;
+  --oc-container-padding-none: 0px;
+  --oc-container-padding-sm: 8px;
+  --oc-control-border-width: 0.5px;
+  --oc-control-gap-lg: 8px;
+  --oc-control-gap-md: 4px;
+  --oc-control-gap-sm: 4px;
+  --oc-control-gap-xl: 8px;
+  --oc-control-group-gap: 8px;
+  --oc-control-padding-x-lg: 16px;
+  --oc-control-padding-x-md: 12px;
+  --oc-control-padding-x-sm: 12px;
+  --oc-control-padding-x-xl: 24px;
+  --oc-control-size-lg: 48px;
+  --oc-control-size-lg-icon: 40px;
+  --oc-control-size-md: 40px;
+  --oc-control-size-md-icon: 32px;
+  --oc-control-size-sm: 32px;
+  --oc-control-size-sm-icon: 24px;
+  --oc-control-size-xl: 64px;
+  --oc-control-size-xl-icon: 48px;
+  --oc-control-size-xs: 16px;
+  --oc-control-size-xs-icon: 12px;
+  --oc-form-field-gap: 16px;
+  --oc-form-header-gap: 24px;
+
+  /* ---- Radius scale ---- */
+  --oc-containers-radius-level-1: 2px;
+  --oc-containers-radius-level-2: 3px;
+  --oc-containers-radius-level-3: 6px;
+  --oc-containers-radius-level-4: 8px;
+  --oc-containers-radius-level-full: 1000px;
+  --oc-containers-radius-none: 0px;
+  --oc-control-radius-lg: 6px;
+  --oc-control-radius-md: 3px;
+  --oc-control-radius-sm: 2px;
+  --oc-control-radius-xl: 6px;
+  --oc-controls-radius-full: 1000px;
+
+  /* ---- Semantic spacing scale ---- */
+  --oc-space-0: 0px;
+  --oc-space-1: 4px;
+  --oc-space-2: 6px;
+  --oc-space-3: 8px;
+  --oc-space-4: 12px;
+  --oc-space-5: 16px;
+  --oc-space-6: 24px;
+  --oc-space-7: 32px;
+  --oc-space-8: 40px;
+  --oc-space-9: 48px;
+  --oc-space-label-letter-spacing: 0.25px;
+
+  /* ---- Overlay washes ---- */
+  --oc-overlay-white-subtle: rgba(255, 255, 255, 0.06);
+  --oc-overlay-white-strong: rgba(255, 255, 255, 0.12);
+
+  /* ---- Motion (choreography) timings ---- */
+  --oc-motion-stream-cadence-min: 26ms;
+  --oc-motion-stream-cadence-jitter: 34ms;
+  --oc-motion-stream-cadence-reduced: 4ms;
+  --oc-motion-stagger-step: 45ms;
+  --oc-motion-layout-morph-crossfade: 120ms;
+
+  /* ---- Motion (choreography) state colors ---- */
+  /* Choreography state color: pending. Reference hex per D1 (no clean core map); rebind to a core primitive in one line later. */
+  --oc-motion-state-pending: #F59E0A;
+  /* Choreography state color: active. Reference hex per D1. */
+  --oc-motion-state-active: #0D9488;
+  /* Choreography state color: settled. Reference hex per D1. */
+  --oc-motion-state-settled: #30A36B;
+  /* Choreography state color: error. Reference hex per D1. */
+  --oc-motion-state-error: #D13314;
+
+  /* ---- Typography ----
+     Pulled from the "Typography" documentation frame (node 26802:2330),
+     not the empty typescale variable collection. Confirms Open Sans as
+     the typeface — the Inter/Antique Legacy font values seen bound to
+     the Toast component look like leftover template cruft, not the
+     actual system; treat Open Sans as source of truth until reconciled. */
+  --oc-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --oc-font-weight-light: 300;
+  --oc-font-weight-regular: 400;
+  --oc-font-weight-semibold: 600;
+  --oc-font-weight-bold: 700;
+
+  --oc-type-h1-size: 28px;
+  --oc-type-h1-line: 40px;
+  --oc-type-h1-weight: var(--oc-font-weight-semibold);
+  --oc-type-h2-size: 24px;
+  --oc-type-h2-line: 32px;
+  --oc-type-h2-weight: var(--oc-font-weight-semibold);
+  --oc-type-h3-size: 20px;
+  --oc-type-h3-line: 28px;
+  --oc-type-h3-weight: var(--oc-font-weight-semibold);
+  --oc-type-h4-size: 20px;
+  --oc-type-h4-line: 28px;
+  --oc-type-h4-weight: var(--oc-font-weight-light);
+  --oc-type-h5-size: 18px;
+  --oc-type-h5-line: 24px;
+  --oc-type-h5-weight: var(--oc-font-weight-semibold);
+  --oc-type-h6-size: 16px;
+  --oc-type-h6-line: 24px;
+  --oc-type-h6-weight: var(--oc-font-weight-semibold);
+  --oc-type-body-size: 16px;
+  --oc-type-body-line: 24px;
+  --oc-type-body-weight: var(--oc-font-weight-regular);
+  --oc-type-label-size: 14px;
+  --oc-type-label-line: 20px;
+  --oc-type-label-weight: var(--oc-font-weight-regular);
+  --oc-type-sm-body-size: 14px;
+  --oc-type-sm-body-line: 20px;
+  --oc-type-sm-body-weight: var(--oc-font-weight-regular);
+  --oc-type-caption-size: 12px;
+  --oc-type-caption-line: 16px;
+  --oc-type-caption-weight: var(--oc-font-weight-regular);
+  --oc-type-para-paragraph-spacing: 16px;
+  --oc-type-sm-para-paragraph-spacing: 8px;
+
+  /* Best-effort fill of the previously-empty alias/onecore "typescale"
+     variable slots, mapped from the styles above. "display-1"/"display-2"
+     are left unset — no example of that tier appeared on the Typography
+     page, so I'm not guessing a value for them. */
+  --oc-typescale-font-size-headline-1: var(--oc-type-h1-size);
+  --oc-typescale-font-weight-headline-1: var(--oc-type-h1-weight);
+  --oc-typescale-font-size-headline-2: var(--oc-type-h2-size);
+  --oc-typescale-font-weight-headline-2: var(--oc-type-h2-weight);
+  --oc-typescale-font-size-headline-3: var(--oc-type-h3-size);
+  --oc-typescale-font-weight-headline-3: var(--oc-type-h3-weight);
+  --oc-typescale-font-size-headline-4: var(--oc-type-h4-size);
+  --oc-typescale-font-weight-headline-4: var(--oc-type-h4-weight);
+  --oc-typescale-font-size-headline-5: var(--oc-type-h5-size);
+  --oc-typescale-font-weight-headline-5: var(--oc-type-h5-weight);
+  --oc-typescale-font-size-label-base: var(--oc-type-label-size);
+  --oc-typescale-font-weight-label-base: var(--oc-type-label-weight);
+  --oc-typescale-font-size-body-base: var(--oc-type-body-size);
+  --oc-typescale-font-weight-body-base: var(--oc-type-body-weight);
+
+  /* ---- Elevation (drop shadows) ----
+     Pulled from get_design_context on the Toast component (core effect
+     tokens "01"/"05" — color #172366 at two alpha levels, per the
+     brand/depth/* position+blur variables). Not in the zip export. */
+  --oc-shadow-sm: 0px 2px 4px 0px rgba(23, 35, 102, 0.15);
+  --oc-shadow-lg: 0px 16px 40px 0px rgba(23, 35, 102, 0.25);
+
+  /* ---- Density spacing (component-level) ----
+     Observed via get_design_context on the Toast component as
+     var(--density/action/..., fallback) references. These come from a
+     Figma "density" variable collection that wasn't part of the
+     alias/core/oc zip exports, so values below are the fallbacks Figma
+     inlined for this specific component, not a full density scale. */
+  --oc-density-action-gap-sm: 4px;
+  --oc-density-action-gap-md: 8px;
+  --oc-density-action-padding-2xs: 4px;
+  --oc-density-action-padding-xs: 6px;
+  --oc-density-action-padding-md: 12px;
+  --oc-density-action-padding-lg: 16px;
+  --oc-density-action-icon-sm: 16px;
+  --oc-density-action-icon-xl: 20px;
+  --oc-density-action-border-radius-sm: 4px;
+  --oc-density-static-gap-xs: 8px;
+  --oc-density-static-padding-3xs: 4px;
+
+  /* ---- Semantic theme tokens (light = default) ---- */
+  --oc-accent: #5358EF;
+  --oc-accent-active: #4238C9;
+  --oc-accent-foreground: #FAFAFA;
+  --oc-accent-highlight: #8858E7;
+  --oc-accent-hover: #4F45E5;
+  --oc-background: #FFFFFF;
+  --oc-border: #C4CEE0;
+  --oc-border-error: #E64D2E;
+  --oc-border-focus: #17A34A;
+  --oc-border-interactive: #0A0B12;
+  --oc-border-interactive-active: #14803D;
+  --oc-border-interactive-hover: #17A34A;
+  --oc-border-popover: #C4CEE0;
+  --oc-border-success: #008000;
+  --oc-brand: #00F2A7;
+  --oc-brand-active: #00BF84;
+  --oc-brand-foreground: rgba(8, 9, 22, 0.502);
+  --oc-brand-hover: #00BF84;
+  --oc-canvas: #EBEEF1;
+  --oc-card: #FFFFFF;
+  --oc-card-foreground: #080916;
+  --oc-container: #FFFFFF;
+  --oc-container-border-width: 0.5px;
+  --oc-container-elevated: #FFFFFF;
+  --oc-container-foreground: #080916;
+  --oc-container-padding-md: 16px;
+  --oc-container-padding-sm: 8px;
+  --oc-container-subtle: #E9EAF4;
+  --oc-containers-radius-level-1: 2px;
+  --oc-containers-radius-level-2: 3px;
+  --oc-containers-radius-level-3: 6px;
+  --oc-containers-radius-level-full: 1000px;
+  --oc-containers-radius-none: 0px;
+  --oc-control-border-width: 0.5px;
+  --oc-control-gap-lg: 8px;
+  --oc-control-gap-md: 4px;
+  --oc-control-gap-sm: 4px;
+  --oc-control-gap-xl: 8px;
+  --oc-control-group-gap: 8px;
+  --oc-control-padding-x-lg: 16px;
+  --oc-control-padding-x-md: 12px;
+  --oc-control-padding-x-sm: 12px;
+  --oc-control-padding-x-xl: 24px;
+  --oc-control-radius-full: 1000px;
+  --oc-control-radius-lg: 6px;
+  --oc-control-radius-md: 2px;
+  --oc-control-radius-sm: 2px;
+  --oc-control-radius-xl: 2px;
+  --oc-control-size-lg: 48px;
+  --oc-control-size-lg-icon: 40px;
+  --oc-control-size-md: 40px;
+  --oc-control-size-md-icon: 32px;
+  --oc-control-size-sm: 32px;
+  --oc-control-size-sm-icon: 24px;
+  --oc-control-size-xl: 64px;
+  --oc-control-size-xl-icon: 48px;
+  --oc-control-size-xs: 16px;
+  --oc-control-size-xs-icon: 12px;
+  --oc-destructive: #D13314;
+  --oc-destructive-active: #A22812;
+  --oc-destructive-foreground: #FFFFFF;
+  --oc-destructive-hover: #BF371D;
+  --oc-disabled: #F2F2F2;
+  --oc-disabled-foreground: #949494;
+  --oc-foreground: #080916;
+  --oc-foreground-on-dark: #FAFAFA;
+  --oc-form-field-gap: 16px;
+  --oc-form-header-gap: 24px;
+  --oc-input: #FFFFFF;
+  --oc-input-alt: #CECFDE;
+  --oc-input-track: #DBDCEC;
+  --oc-inverse-active: rgba(255, 255, 255, 0.12);
+  --oc-inverse-hover: rgba(255, 255, 255, 0.06);
+  --oc-item: #FFFFFF;
+  --oc-item-active: #DBFCE8;
+  --oc-item-foreground: #030517;
+  --oc-item-hover: #F0FCF5;
+  --oc-muted: #1E273A;
+  --oc-muted-active: #1E273A;
+  --oc-muted-foreground: #677087;
+  --oc-muted-hover: #1E273A;
+  --oc-placeholder: #A0A1B0;
+  --oc-popover: #FFFFFF;
+  --oc-popover-foreground: #14141C;
+  --oc-primary: #303030;
+  --oc-primary-active: #262629;
+  --oc-primary-foreground: #FFFFFF;
+  --oc-primary-hover: #383838;
+  --oc-primary-hover-foreground: #17171C;
+  --oc-primary-light-active: #262629;
+  --oc-primary-light-hover: #383838;
+  --oc-ring: #14803D;
+  --oc-scrim: rgba(0, 0, 0, 0.502);
+  --oc-secondary: #EBECF5;
+  --oc-secondary-active: #A8A9BD;
+  --oc-secondary-foreground: #080916;
+  --oc-secondary-hover: #DBDCEC;
+  --oc-secondary-light-active: #EBECF5;
+  --oc-secondary-light-hover: #EBECF5;
+  --oc-spacing-actions-lg: 16px;
+  --oc-spacing-actions-md: 8px;
+  --oc-spacing-layout-lg: 24px;
+  --oc-spacing-layout-md: 16px;
+  --oc-spacing-layout-none: 0px;
+  --oc-spacing-layout-xl: 32px;
+  --oc-spacing-layout-xs: 8px;
+  --oc-success: #30A36B;
+  --oc-success-active: #1C5E42;
+  --oc-success-foreground: #FFFFFF;
+  --oc-success-hover: #218259;
+  --oc-supportive-blue: #3B82F5;
+  --oc-supportive-blue-light: #F0F5FF;
+  --oc-supportive-blue-on: #FFFFFF;
+  --oc-supportive-green: #17A34A;
+  --oc-supportive-green-light: #F0FCF5;
+  --oc-supportive-green-on: #FFFFFF;
+  --oc-supportive-grey: #6E7080;
+  --oc-supportive-grey-light: #F7F8FC;
+  --oc-supportive-grey-on: #FFFFFF;
+  --oc-supportive-orange: #EB590D;
+  --oc-supportive-orange-light: #FFF7ED;
+  --oc-supportive-orange-on: #FFFFFF;
+  --oc-supportive-pink: #ED4799;
+  --oc-supportive-pink-light: #FCF2F7;
+  --oc-supportive-pink-on: #FFFFFF;
+  --oc-supportive-purple: #7C3AED;
+  --oc-supportive-purple-light: #F5F3FF;
+  --oc-supportive-purple-on: #FFFFFF;
+  --oc-supportive-red: #DB2626;
+  --oc-supportive-red-light: #FFF2F2;
+  --oc-supportive-red-on: #FFFFFF;
+  --oc-supportive-teal: #0D9488;
+  --oc-supportive-teal-light: #F0FDFA;
+  --oc-supportive-teal-on: #FFFFFF;
+  --oc-supportive-yellow: #F59E0A;
+  --oc-supportive-yellow-light: #FFFAEB;
+  --oc-supportive-yellow-on: #422006;
+  --oc-utility-black: #171717;
+  --oc-utility-link: #0A0B12;
+  --oc-utility-white: #FAFAFA;
+
+}
+
+[data-theme="dark"] {
+  /* ---- Semantic theme tokens (dark) ---- */
+  --oc-accent: #5358EF;
+  --oc-accent-active: #4238C9;
+  --oc-accent-foreground: #FAFAFA;
+  --oc-accent-highlight: #8858E7;
+  --oc-accent-hover: #4F45E5;
+  --oc-background: #181921;
+  --oc-border: #3A3B4F;
+  --oc-border-error: #E54D2E;
+  --oc-border-focus: #4ADE80;
+  --oc-border-interactive: #A1A4B5;
+  --oc-border-interactive-active: #21C45E;
+  --oc-border-interactive-hover: #4ADE80;
+  --oc-border-popover: #303242;
+  --oc-border-success: #008000;
+  --oc-brand: #00F2A7;
+  --oc-brand-active: #00BF84;
+  --oc-brand-foreground: rgba(8, 9, 22, 0.502);
+  --oc-brand-hover: #00BF84;
+  --oc-canvas: #151621;
+  --oc-card: #1D1E2B;
+  --oc-card-foreground: #FFFFFF;
+  --oc-container: #212330;
+  --oc-container-border-width: 0.5px;
+  --oc-container-elevated: #181921;
+  --oc-container-foreground: #EEEFFC;
+  --oc-container-padding-md: 16px;
+  --oc-container-padding-sm: 8px;
+  --oc-container-subtle: #191A23;
+  --oc-containers-radius-level-1: 2px;
+  --oc-containers-radius-level-2: 3px;
+  --oc-containers-radius-level-3: 6px;
+  --oc-containers-radius-level-full: 1000px;
+  --oc-containers-radius-none: 0px;
+  --oc-control-border-width: 0.5px;
+  --oc-control-gap-lg: 8px;
+  --oc-control-gap-md: 4px;
+  --oc-control-gap-sm: 4px;
+  --oc-control-gap-xl: 8px;
+  --oc-control-group-gap: 8px;
+  --oc-control-padding-x-lg: 16px;
+  --oc-control-padding-x-md: 12px;
+  --oc-control-padding-x-sm: 12px;
+  --oc-control-padding-x-xl: 24px;
+  --oc-control-radius-full: 1000px;
+  --oc-control-radius-lg: 2px;
+  --oc-control-radius-md: 2px;
+  --oc-control-radius-sm: 2px;
+  --oc-control-radius-xl: 2px;
+  --oc-control-size-lg: 48px;
+  --oc-control-size-lg-icon: 40px;
+  --oc-control-size-md: 40px;
+  --oc-control-size-md-icon: 32px;
+  --oc-control-size-sm: 32px;
+  --oc-control-size-sm-icon: 24px;
+  --oc-control-size-xl: 64px;
+  --oc-control-size-xl-icon: 48px;
+  --oc-control-size-xs: 16px;
+  --oc-control-size-xs-icon: 12px;
+  --oc-destructive: #E64D2E;
+  --oc-destructive-active: #A62912;
+  --oc-destructive-foreground: #FFFFFF;
+  --oc-destructive-hover: #D13314;
+  --oc-disabled: #262835;
+  --oc-disabled-foreground: #707184;
+  --oc-foreground: #EEEFFC;
+  --oc-foreground-on-dark: #030517;
+  --oc-form-field-gap: 16px;
+  --oc-form-header-gap: 24px;
+  --oc-input: #36384D;
+  --oc-input-alt: #262835;
+  --oc-input-track: #52546F;
+  --oc-inverse-active: rgba(255, 255, 255, 0.12);
+  --oc-inverse-hover: rgba(255, 255, 255, 0.06);
+  --oc-item: #0F1729;
+  --oc-item-active: #12311F;
+  --oc-item-foreground: #FAFAFA;
+  --oc-item-hover: #0D2419;
+  --oc-muted: #262835;
+  --oc-muted-active: #262835;
+  --oc-muted-foreground: #858699;
+  --oc-muted-hover: #262835;
+  --oc-placeholder: #A3A6B5;
+  --oc-popover: #202128;
+  --oc-popover-foreground: #FFFFFF;
+  --oc-primary: #44465D;
+  --oc-primary-active: #616161;
+  --oc-primary-foreground: #FFFFFF;
+  --oc-primary-hover: #525252;
+  --oc-primary-hover-foreground: #17171C;
+  --oc-primary-light-active: #616161;
+  --oc-primary-light-hover: #525252;
+  --oc-ring: #4ADE80;
+  --oc-scrim: rgba(0, 0, 0, 0.6);
+  --oc-secondary: #404259;
+  --oc-secondary-active: #52546F;
+  --oc-secondary-foreground: #FFFFFF;
+  --oc-secondary-hover: #262835;
+  --oc-secondary-light-active: #404259;
+  --oc-secondary-light-hover: #404259;
+  --oc-spacing-actions-lg: 16px;
+  --oc-spacing-actions-md: 8px;
+  --oc-spacing-layout-lg: 24px;
+  --oc-spacing-layout-md: 16px;
+  --oc-spacing-layout-none: 0px;
+  --oc-spacing-layout-xl: 32px;
+  --oc-spacing-layout-xs: 8px;
+  --oc-success: #30A36B;
+  --oc-success-active: #1C5E42;
+  --oc-success-foreground: #FFFFFF;
+  --oc-success-hover: #218259;
+  --oc-supportive-blue: #61A6FA;
+  --oc-supportive-blue-light: #172654;
+  --oc-supportive-blue-on: #030517;
+  --oc-supportive-green: #4ADE80;
+  --oc-supportive-green-light: #052E17;
+  --oc-supportive-green-on: #030517;
+  --oc-supportive-grey: #A1A4B3;
+  --oc-supportive-grey-light: #262835;
+  --oc-supportive-grey-on: #030517;
+  --oc-supportive-orange: #FA913D;
+  --oc-supportive-orange-light: #421408;
+  --oc-supportive-orange-on: #030517;
+  --oc-supportive-pink: #F573B5;
+  --oc-supportive-pink-light: #4F0824;
+  --oc-supportive-pink-on: #030517;
+  --oc-supportive-purple: #A78BFA;
+  --oc-supportive-purple-light: #2E1065;
+  --oc-supportive-purple-on: #030517;
+  --oc-supportive-red: #F77070;
+  --oc-supportive-red-light: #450A0A;
+  --oc-supportive-red-on: #030517;
+  --oc-supportive-teal: #2DD4BF;
+  --oc-supportive-teal-light: #042F2E;
+  --oc-supportive-teal-on: #030517;
+  --oc-supportive-yellow: #FCD44D;
+  --oc-supportive-yellow-light: #451A03;
+  --oc-supportive-yellow-on: #030517;
+  --oc-utility-black: #171717;
+  --oc-utility-link: #44465D;
+  --oc-utility-white: #FAFAFA;
+}
+
+.oc-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 1px var(--oc-border-focus), 0 0 0 3px var(--oc-border-focus);
+}
