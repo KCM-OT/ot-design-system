@@ -2,7 +2,18 @@ import { useState } from "react";
 import { Toast } from "./components/Toast";
 import type { ToastType } from "./components/Toast";
 import { Icon, iconNames } from "./icons";
+import { logos } from "./logo";
 import "./App.css";
+
+const LOGO_ITEMS: { name: keyof typeof logos; label: string }[] = [
+  { name: "symbol", label: "Symbol" },
+  { name: "lockupHorizontal", label: "Default lockup — horizontal" },
+  { name: "lockupVertical", label: "Default lockup — vertical" },
+  { name: "subbrandLockupHorizontal", label: "Subbrand lockup — horizontal" },
+  { name: "subbrandLockupVertical", label: "Subbrand lockup — vertical" },
+  { name: "byotLockupHorizontal", label: "BYOT lockup — horizontal" },
+  { name: "byotLockupVertical", label: "BYOT lockup — vertical" },
+];
 
 const TOAST_TYPES: ToastType[] = ["neutral", "info", "error", "warning", "success"];
 
@@ -104,6 +115,28 @@ function App() {
               <div className="oc-swatch" key={name} style={{ alignItems: "center" }}>
                 <Icon name={name} size={24} />
                 <span className="oc-swatch__label">{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="oc-section">
+        <h2 className="oc-section__title">Logos</h2>
+        <div className="oc-card">
+          <p style={{ marginTop: 0, color: "var(--oc-muted-foreground)", fontSize: 14 }}>
+            Reversed lockups pulled from the OneCore Figma file (node 30117:24579) — light fill,
+            shown on a dark chip here since they're built for dark or brand-colored surfaces. See{" "}
+            <code>src/logo/index.ts</code>.
+          </p>
+          <div className="oc-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
+            {LOGO_ITEMS.map(({ name, label }) => (
+              <div className="oc-swatch" key={name}>
+                <div className="oc-logo-chip">
+                  <img src={logos[name]} alt={label} />
+                </div>
+                <span className="oc-swatch__name">{label}</span>
+                <span className="oc-swatch__label">{name}.svg</span>
               </div>
             ))}
           </div>
